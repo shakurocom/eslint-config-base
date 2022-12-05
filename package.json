@@ -1,0 +1,50 @@
+{
+  "name": "@shakuroinc/eslint-config-base",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "author": "Shakuro team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shakurocom/eslint-config-base"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .ts,.tsx,.js --ignore-path .gitignore",
+    "release": "npm version && git push --tags && npm publish --access public --new-version"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "prettier": "^2.8.0",
+    "typescript": "^4.9.3"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "volta": {
+    "node": "18.12.1",
+    "yarn": "1.18.0"
+  }
+}
