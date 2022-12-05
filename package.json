@@ -10,7 +10,7 @@
   },
   "scripts": {
     "lint": "eslint . --ext .ts,.tsx,.js --ignore-path .gitignore",
-    "release": "git push --tags && npm publish --access public --new-version"
+    "release": "git push origin main --tags && npm publish --access public --new-version"
   },
   "dependencies": {},
   "devDependencies": {
