@@ -37,6 +37,12 @@ module.exports = {
         trailingUnderscore: 'forbid',
       },
       {
+        selector: ['default', 'variable', 'property'],
+        format: null,
+        leadingUnderscore: 'allow',
+        filter: '^_$',
+      },
+      {
         selector: 'typeLike',
         format: ['PascalCase'],
       },
@@ -46,8 +52,8 @@ module.exports = {
       },
       {
         selector: 'property',
-        filter: '^__html$',
         format: null,
+        filter: '^__html$',
       },
     ],
     '@typescript-eslint/no-empty-function': 0,
