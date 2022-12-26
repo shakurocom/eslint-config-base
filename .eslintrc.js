@@ -165,5 +165,6 @@ module.exports = {
       },
     ],
     'simple-import-sort/exports': 1,
+    quotes: ['error', 'single', { allowTemplateLiterals: false, avoidEscape: true }],
   },
 };
