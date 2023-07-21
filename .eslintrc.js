@@ -13,16 +13,16 @@ module.exports = {
   ],
 
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: "latest",
     sourceType: 'module',
   },
 
   rules: {
-    '@typescript-eslint/ban-ts-ignore': 0,
-    '@typescript-eslint/explicit-function-return-type': 0,
-    '@typescript-eslint/explicit-member-accessibility': 0,
-    '@typescript-eslint/explicit-module-boundary-types': 0,
-    '@typescript-eslint/interface-name-prefix': 0,
+    '@typescript-eslint/ban-ts-ignore': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-member-accessibility': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -41,7 +41,7 @@ module.exports = {
         selector: ['default', 'variable', 'property'],
         format: null,
         leadingUnderscore: 'allow',
-        filter: '^_$',
+        filter: '^[_]*$'
       },
       {
         selector: 'typeLike',
@@ -57,9 +57,11 @@ module.exports = {
         filter: '^__html$',
       },
     ],
-    '@typescript-eslint/no-empty-function': 0,
-    '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/no-object-literal-type-assertion': 0,
+    '@typescript-eslint/no-empty-function': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['warn', { 'argsIgnorePattern': '^[_]*$' }],
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-object-literal-type-assertion': 'off',
     '@typescript-eslint/padding-line-between-statements': [
       'error',
       {
@@ -118,8 +120,8 @@ module.exports = {
       },
     ],
     curly: ['error', 'multi-line'],
-    'import/order': 0,
-    'no-duplicate-imports': 2,
+    'import/order': 'off',
+    'no-duplicate-imports': 'error',
     'no-restricted-imports': [
       'error',
       {
@@ -132,7 +134,7 @@ module.exports = {
         ],
       },
     ],
-    'import/no-unresolved': 0,
+    'import/no-unresolved': 'off',
     'import/no-restricted-paths': [
       'error',
       {
@@ -145,7 +147,7 @@ module.exports = {
         ],
       },
     ],
-    'sort-imports': 0,
+    'sort-imports': 'off',
     'max-lines': [
       'error',
       {
@@ -166,7 +168,7 @@ module.exports = {
         ],
       },
     ],
-    'simple-import-sort/exports': 1,
+    'simple-import-sort/exports': 'warn',
     quotes: ['error', 'single', { allowTemplateLiterals: false, avoidEscape: true }],
   },
 };
