@@ -118,6 +118,7 @@ module.exports = {
         ],
         next: 'export',
       },
+      { blankLine: 'always', prev: 'directive', next: '*' },
     ],
     curly: ['error', 'multi-line'],
     'import/order': 'off',
@@ -148,7 +149,6 @@ module.exports = {
       },
     ],
     'sort-imports': 'off',
-    'no-console': 'error',
     'max-lines': [
       'error',
       {
@@ -156,6 +156,7 @@ module.exports = {
         skipComments: true,
       },
     ],
+    'no-console': 'error',
     'simple-import-sort/imports': [
       1,
       {
