@@ -13,7 +13,7 @@ module.exports = {
   ],
 
   parserOptions: {
-    ecmaVersion: "latest",
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
 
@@ -41,7 +41,7 @@ module.exports = {
         selector: ['default', 'variable', 'property'],
         format: null,
         leadingUnderscore: 'allow',
-        filter: '^[_]*$'
+        filter: '^[_]*$',
       },
       {
         selector: 'typeLike',
@@ -59,7 +59,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-empty-function': 'off',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['warn', { 'argsIgnorePattern': '^[_]*$' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^[_]*$' }],
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-object-literal-type-assertion': 'off',
     '@typescript-eslint/padding-line-between-statements': [
@@ -148,6 +148,7 @@ module.exports = {
       },
     ],
     'sort-imports': 'off',
+    'no-console': 'error',
     'max-lines': [
       'error',
       {
